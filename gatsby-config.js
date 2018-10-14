@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Tailwind Emotion Starter',
+    title: 'Muhammad Muhajir',
+    shortTitle: 'Muhajir',
   },
   plugins: [
     'gatsby-plugin-tailwindcss',
