@@ -2,18 +2,11 @@ import React from 'react'
 import styled from 'react-emotion'
 
 import Layout from '../components/layout'
+import { Title, Tagline } from '../components/Text'
+import OpenSourceSection from '../components/OpenSourceSection'
 
-const Title = styled.h1`
-  ${tw`text-grey-darker text-xl`};
-`
-const Tagline = styled.h2`
-  ${tw`text-grey-darkest text-5xl`};
-`
 const Section = styled.section`
   ${tw`py-32 m-auto px-8 max-w-xl`};
-`
-const Description = styled.p`
-  ${tw``};
 `
 const TitleSection = () => (
   <Section>
@@ -24,22 +17,12 @@ const TitleSection = () => (
   </Section>
 )
 
-const OpenSourceSection = () => (
-  <Section>
-    <Title>Open Source</Title>
-    <Tagline>Gatsbook</Tagline>
-    <Description>
-      All you need for your (open source) project documentation.
-    </Description>
-    <Tagline>Gatsby lugin Tailwind</Tagline>
-    <Description>Plug Tailwind CSS to your Gatsby website</Description>
-  </Section>
-)
-
 const IndexPage = () => (
   <Layout>
     <TitleSection />
-    <OpenSourceSection />
+    <Section>
+      <OpenSourceSection />
+    </Section>
   </Layout>
 )
 
