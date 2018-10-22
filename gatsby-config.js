@@ -1,9 +1,17 @@
 module.exports = {
   siteMetadata: {
     title: 'Muhammad Muhajir',
-    shortTitle: 'Muhajir',
+    shortTitle: 'MUHAJIR',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',

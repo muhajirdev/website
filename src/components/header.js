@@ -3,16 +3,16 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 
 const Container = styled.div`
-  ${tw`bg-grey-lightest px-32 py-8 flex justify-between`};
+  ${tw`px-16 py-6 flex justify-between`};
 `
 const Items = styled.div`
-  ${tw`flex`};
+  ${tw`flex items-center`};
 `
 const Item = styled.h3`
-  ${tw`text-grey-darkest ml-4 text-xl mb-0`};
+  ${tw`text-grey-darkest ml-8 text-xs mb-0`};
 `
 const Title = styled.h1`
-  ${tw`text-grey-darkest text-xl m-0`};
+  ${tw`text-grey-darkest text-base m-0`};
 `
 const StyledLink = styled(Link)`
   ${tw`no-underline text-inherit`};
@@ -26,11 +26,17 @@ const Header = ({ siteTitle }) => (
       </StyledLink>
     </div>
     <Items>
+      <StyledLink to="/reading">
+        <Item>WRITING</Item>
+      </StyledLink>
       <StyledLink to="/blog">
-        <Item>Blog</Item>
+        <Item>READING</Item>
       </StyledLink>
       <StyledLink to="/projects">
-        <Item>Projects</Item>
+        <Item>WORKS</Item>
+      </StyledLink>
+      <StyledLink to="/projects">
+        <Item>GITHUB</Item>
       </StyledLink>
     </Items>
   </Container>

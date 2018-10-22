@@ -10,7 +10,7 @@ const Container = styled.div`
 
 const OpenSourceSection = () => (
   <Container>
-    <Title>Open Source</Title>
+    <Title>Open Sources</Title>
     <Link to="https://github.com/gatsbook/gatsbook">
       <Tagline>Gatsbook</Tagline>
       <Subtitle>Tech: React, GatsbyJS, Tailwind CSS</Subtitle>

@@ -1,7 +1,7 @@
 import styled from 'react-emotion'
 
 export const Title = styled.h1`
-  ${tw`text-grey-darker text-xl`};
+  ${tw`text-black text-xl`};
 `
 
 export const Subtitle = styled.h6`

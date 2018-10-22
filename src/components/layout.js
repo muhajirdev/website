@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
-  ${tw`px-32 py-8 font-sans flex-1 overflow-y-scroll`};
+  ${tw`font-sans flex-1 overflow-y-scroll`};
 `
 
 const Layout = ({ children }) => (

@@ -4,25 +4,28 @@ import styled from 'react-emotion'
 import Layout from '../components/layout'
 import { Title, Tagline } from '../components/Text'
 import OpenSourceSection from '../components/OpenSourceSection'
+import Section from '../components/Section'
 
-const Section = styled.section`
-  ${tw`py-32 m-auto px-8 max-w-xl`};
+const Container = styled.div`
+  ${tw``};
 `
 const TitleSection = () => (
-  <Section>
-    <Title>Muhammad Muhajir. Front-end & mobile developer</Title>
-    <Tagline>
-      Developing web & app: fast, accessible, and easy to navigate.
-    </Tagline>
-  </Section>
+  <>
+    <Title>Muhammad Muhajir.</Title>
+    <Tagline>Front end developer / ReactJS</Tagline>
+  </>
 )
 
 const IndexPage = () => (
   <Layout>
-    <TitleSection />
-    <Section>
-      <OpenSourceSection />
-    </Section>
+    <Container>
+      <Section dark>
+        <TitleSection />
+      </Section>
+      <Section>
+        <OpenSourceSection />
+      </Section>
+    </Container>
   </Layout>
 )
 
