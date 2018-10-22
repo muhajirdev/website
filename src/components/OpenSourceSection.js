@@ -18,6 +18,14 @@ const OpenSourceSection = () => (
         All you need for your (open source) project documentation.
       </Paragraph>
     </Link>
+    <Link to="https://github.com/gatsbook/gatsbook">
+      <Tagline>DeepWork</Tagline>
+      <Subtitle>Tech: NodeJS</Subtitle>
+      <Paragraph>
+        A CLI to turn off mac off notification for x amount of time. To help you
+        doing deepwork
+      </Paragraph>
+    </Link>
     <Link to="https://github.com/muhajirframe/react-tailwind-emotion-starter">
       <Tagline>React Tailwind Emotion Starter</Tagline>
       <Subtitle>Tech: React, Tailwind CSS</Subtitle>
