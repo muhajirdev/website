@@ -1,0 +1,53 @@
+- title: Gatsbook
+  link: https://github.com/gatsbook/gatsbook
+  description: All you need for your (open source) project documentation.
+  techs:
+    - React
+    - GatsbyJS
+    - TailwindCSS
+- title: Deepwork
+  link: https://github.com/muhajirframe/deepwork
+  description: A CLI to turn off mac off notification for x amount of time. To help you doing deepwork
+  techs:
+    - NodeJS
+    - Typescript
+- title: React Tailwind Emotion Starter
+  link: https://github.com/muhajirframe/react-tailwind-emotion-starter
+  description: A ReactJS starter with Tailwind CSS
+  techs:
+    - React
+    - Tailwind CSS
+- title: Gatsby Tailwind Emotion Starter
+  link: https://github.com/muhajirframe/gatsby-tailwind-emotion-starter
+  description: A Gatsby starter with Tailwind CSS + EmotionJS
+  techs:
+    - React
+    - GatsbyJS
+    - Tailwind CSS
+- title: VSCode Tailwind Styled Snippets
+  link: https://github.com/muhajirframe/vscode-tailwind-styled-snippets
+  description: Time saver for Tailwind CSS + Styled Components / EmotionJS user who use VSCode
+  techs:
+    - VSCode
+- title: VSCode React Emotion
+  link: https://github.com/muhajirframe/vscode-react-emotion
+  description: Time saver for react-emotion user
+  techs:
+    - VSCode
+- title: Gatsby Starter Firebae
+  link: https://github.com/muhajirframe/gatsby-starter-firebase
+  description: Gatsby + Firebase 👍
+  techs:
+    - ReactJS
+    - GatsbyJS
+    - Firebase
+- title: Gatsby Plugin TailwindCSS
+  link: https://github.com/muhajirframe/gatsby-plugin-tailwindcss
+  description: Plugin Tailwind CSS to your Gatsby website
+  techs:
+    - GatsbyJS
+- title: React Damn Simple Grid
+  link: https://github.com/muhajirframe/react-damn-simple-grid
+  description: A damn simple grid React component
+  techs:
+    - ReactJS

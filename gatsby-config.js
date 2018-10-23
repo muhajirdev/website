@@ -4,6 +4,13 @@ module.exports = {
     shortTitle: 'MUHAJIR',
   },
   plugins: [
+    'gatsby-transformer-yaml',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
