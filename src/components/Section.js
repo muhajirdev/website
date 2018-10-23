@@ -5,7 +5,7 @@ const darkBackground = css`
 `
 
 const Section = styled.section`
-  ${tw`py-32`};
+  ${tw`py-32 px-4 md:px-16`};
   > * {
     ${tw`mx-auto max-w-xl`};
   }
