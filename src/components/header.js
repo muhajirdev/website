@@ -9,7 +9,7 @@ const Items = styled.div`
   ${tw`flex items-center`};
 `
 const Item = styled.h3`
-  ${tw`text-grey-darkest ml-8 text-xs mb-0`};
+  ${tw`text-grey-darkest ml-4 sm:ml-8 text-xs mb-0`};
 `
 const Title = styled.h1`
   ${tw`text-grey-darkest text-base m-0 hidden md:block`};
