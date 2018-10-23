@@ -11,11 +11,11 @@ const Container = styled.div`
 
 const OpenSourceSection = ({ data }) => (
   <Container>
-    <Title>Open Sources</Title>
+    <Tagline> Sources</Tagline>
     {data.map(item => (
       <div key={item.id}>
         <Link to={item.link}>
-          <Tagline>{item.title}</Tagline>
+          <Title>{item.title}</Title>
           <Subtitle>
             Techs:
             {item.techs.map(tech => (
