@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'react-emotion'
 
-import { Tagline, Title, Subtitle, Paragraph } from './Text'
+import { Tagline, Title, Subtitle } from './Text'
 import Link from './Link'
 
 const Container = styled.div`
@@ -22,7 +22,6 @@ const OpenSourceSection = ({ data }) => (
               <span key={tech}> {tech} </span>
             ))}
           </Subtitle>
-          <Paragraph>{item.description}</Paragraph>
         </Link>
       </div>
     ))}
@@ -38,7 +37,6 @@ export default () => (
             node {
               id
               title
-              description
               link
               techs
             }
