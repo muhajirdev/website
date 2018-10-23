@@ -16,12 +16,7 @@ const OpenSourceSection = ({ data }) => (
       <div key={item.id}>
         <Link to={item.link}>
           <Title>{item.title}</Title>
-          <Subtitle>
-            Techs:
-            {item.techs.map(tech => (
-              <span key={tech}> {tech} </span>
-            ))}
-          </Subtitle>
+          <Subtitle>Techs: {item.techs.join(', ')}</Subtitle>
         </Link>
       </div>
     ))}
