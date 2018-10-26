@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const OpenSourceSection = ({ data }) => (
   <Container>
-    <Tagline> Sources</Tagline>
+    <Tagline>Open Sources</Tagline>
     {data.map(item => (
       <List to={item.link} name={item.title} meta={item.techs.join(', ')} />
     ))}
