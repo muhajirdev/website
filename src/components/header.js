@@ -32,8 +32,8 @@ const Header = ({ siteTitle }) => (
       <StyledLink to="/reading">
         <Item>READING</Item>
       </StyledLink>
-      <StyledLink to="/works">
-        <Item>WORKS</Item>
+      <StyledLink to="/work">
+        <Item>WORK</Item>
       </StyledLink>
       <StyledLink to="https://github.com/muhajirframe">
         <Item>GITHUB</Item>
