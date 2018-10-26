@@ -11,8 +11,8 @@ const Container = styled.div`
 `
 const TitleSection = () => (
   <>
-    <Title>Muhammad Muhajir.</Title>
-    <Tagline>Front end developer / ReactJS</Tagline>
+    <Title>Muhammad Muhajir. React / React Native / NodeJS</Title>
+    <Tagline>Fullstack Javascript Developer</Tagline>
   </>
 )
 
