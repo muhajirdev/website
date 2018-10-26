@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'react-emotion'
 import { Tagline } from '../../components/Text'
 
 import Layout from '../../components/layout'
