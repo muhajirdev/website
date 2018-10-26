@@ -1,14 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import styled from 'react-emotion'
 
 import Link from '../components/Link'
 import Layout from '../components/layout'
-
-const Container = styled.div`
-  ${tw`max-w-md pl-32 py-24`};
-`
+import Section from '../components/Section'
+import { Tagline } from '../components/Text'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -23,8 +20,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`${post.frontmatter.title} | ${siteTitle}`}
       />
-      <Container>
-        <h1>{post.frontmatter.title}</h1>
+      <Section>
+        <Tagline>{post.frontmatter.title}</Tagline>
         <p
           style={{
             display: 'block',
@@ -33,7 +30,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
 
         <ul
           style={{
@@ -59,7 +55,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
-      </Container>
+      </Section>
     </Layout>
   )
 }
