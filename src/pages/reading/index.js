@@ -1,0 +1,53 @@
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import styled from 'react-emotion'
+import { Tagline } from '../../components/Text'
+
+import Layout from '../../components/layout'
+import Section from '../../components/Section'
+import List from '../../components/List'
+
+const index = () => (
+  <Layout>
+    <StaticQuery
+      query={graphql`
+        {
+          allReadingYaml {
+            edges {
+              node {
+                id
+                title
+                url
+                author
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        const items = data.allReadingYaml.edges.map(({ node }) => ({
+          title: node.title,
+          author: node.author,
+          url: node.url,
+        }))
+        return (
+          <Section>
+            <Tagline>Reading</Tagline>
+            <div>
+              {items.map(item => (
+                <List
+                  to={item.url}
+                  key={item.url}
+                  name={item.title}
+                  meta={item.author}
+                />
+              ))}
+            </div>
+          </Section>
+        )
+      }}
+    />
+  </Layout>
+)
+
+export default index
