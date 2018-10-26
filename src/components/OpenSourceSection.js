@@ -2,8 +2,8 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'react-emotion'
 
-import { Tagline, Title, Subtitle } from './Text'
-import Link from './Link'
+import { Tagline } from './Text'
+import List from './List'
 
 const Container = styled.div`
   ${tw``};
@@ -13,12 +13,7 @@ const OpenSourceSection = ({ data }) => (
   <Container>
     <Tagline> Sources</Tagline>
     {data.map(item => (
-      <div key={item.id}>
-        <Link to={item.link}>
-          <Title>{item.title}</Title>
-          <Subtitle>Techs: {item.techs.join(', ')}</Subtitle>
-        </Link>
-      </div>
+      <List to={item.link} name={item.title} meta={item.techs.join(', ')} />
     ))}
   </Container>
 )
