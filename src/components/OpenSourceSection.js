@@ -13,7 +13,7 @@ const OpenSourceSection = ({ data }) => (
   <Container>
     <Tagline>Open Sources</Tagline>
     {data.map(item => (
-      <List to={item.link} name={item.title} meta={item.techs.join(', ')} />
+      <List key={item.link} to={item.link} name={item.title} meta={item.techs.join(', ')} />
     ))}
   </Container>
 )
