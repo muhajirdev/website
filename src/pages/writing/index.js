@@ -1,19 +1,13 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'react-emotion'
-import Link from '../../components/Link'
 import { Tagline } from '../../components/Text'
 
 import Layout from '../../components/layout'
 import Section from '../../components/Section'
+import List from '../../components/List'
 
-// const Container = styled.div`
-//   ${tw`max-w-md pl-32 py-20`};
-// `
-const Post = styled.li`
-  ${tw`font-bold text-grey-darkest py-2`};
-`
-const AllPosts = styled.ul`
+const AllPosts = styled.div`
   ${tw``};
 `
 
@@ -31,7 +25,7 @@ const index = () => (
                 }
                 frontmatter {
                   title
-                  date
+                  date(formatString: "MMMM Do, YYYY")
                 }
               }
             }
@@ -49,9 +43,12 @@ const index = () => (
             <Tagline>Writings</Tagline>
             <AllPosts>
               {allPost.map(post => (
-                <Link to={post.slug} key={post.slug}>
-                  <Post>{post.title}</Post>
-                </Link>
+                <List
+                  to={post.slug}
+                  key={post.slug}
+                  name={post.title}
+                  meta={post.date}
+                />
               ))}
             </AllPosts>
           </Section>
