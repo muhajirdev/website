@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'react-emotion'
+import Link from './Link'
 
 const Container = styled.div`
   ${tw`px-4 md:px-16 py-6 flex justify-between`};
@@ -26,16 +26,16 @@ const Header = ({ siteTitle }) => (
       </StyledLink>
     </div>
     <Items>
-      <StyledLink to="/reading">
+      <StyledLink to="/writing">
         <Item>WRITING</Item>
       </StyledLink>
-      <StyledLink to="/blog">
+      <StyledLink to="/reading">
         <Item>READING</Item>
       </StyledLink>
-      <StyledLink to="/projects">
+      <StyledLink to="/works">
         <Item>WORKS</Item>
       </StyledLink>
-      <StyledLink to="/projects">
+      <StyledLink to="https://github.com/muhajirframe">
         <Item>GITHUB</Item>
       </StyledLink>
     </Items>
