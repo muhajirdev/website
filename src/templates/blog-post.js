@@ -1,8 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'react-emotion'
 
+import Link from '../components/Link'
 import Layout from '../components/layout'
 
 const Container = styled.div`
