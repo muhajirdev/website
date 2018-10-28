@@ -1,11 +1,23 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import styled from 'react-emotion'
 
 import Link from '../components/Link'
 import Layout from '../components/layout'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
+import Meta from '../components/Meta'
+
+const FeaturedImg = styled.img`
+  ${tw`mx-auto flex`};
+`
+const Content = styled.div`
+  ${tw`max-w-md`};
+  p {
+    ${tw`leading-loose text-grey-darkest`};
+  }
+`
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -20,16 +32,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`${post.frontmatter.title} | ${siteTitle}`}
       />
-      <Section>
+      <Section small>
         <Tagline>{post.frontmatter.title}</Tagline>
-        <p
-          style={{
-            display: 'block',
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Meta>{post.frontmatter.date}</Meta>
+      </Section>
+      <FeaturedImg src="https://cdn-images-1.medium.com/max/2000/1*9EYY227bsAyra10tzPGJRA.jpeg" />
+      <Section small>
+        <Content dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <ul
           style={{
