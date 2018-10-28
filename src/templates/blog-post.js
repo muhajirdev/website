@@ -12,11 +12,9 @@ const FeaturedImg = styled.img`
   ${tw`mx-auto flex`};
 `
 const Content = styled.div`
+  ${tw`max-w-md`};
   p {
-    ${tw`leading-loose text-grey-darkest max-w-md mx-auto`};
-  }
-  img {
-    ${tw`max-w-md mx-auto block`};
+    ${tw`leading-loose text-grey-darkest`};
   }
 `
 
@@ -25,6 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const siteDescription = post.excerpt
   const { previous, next } = pageContext
+  console.log(post)
 
   return (
     <Layout location={location}>
@@ -37,7 +36,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <Tagline>{post.frontmatter.title}</Tagline>
         <Meta>{post.frontmatter.date}</Meta>
       </Section>
-      <FeaturedImg src="https://cdn-images-1.medium.com/max/2000/1*9EYY227bsAyra10tzPGJRA.jpeg" />
+      <FeaturedImg src={post.frontmatter.featured_image} />
       <Section small>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
 
@@ -86,6 +85,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        featured_image
       }
     }
   }
