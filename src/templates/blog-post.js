@@ -12,9 +12,11 @@ const FeaturedImg = styled.img`
   ${tw`mx-auto flex`};
 `
 const Content = styled.div`
-  ${tw`max-w-md`};
   p {
-    ${tw`leading-loose text-grey-darkest`};
+    ${tw`leading-loose text-grey-darkest max-w-md mx-auto`};
+  }
+  img {
+    ${tw`max-w-md mx-auto block`};
   }
 `
 

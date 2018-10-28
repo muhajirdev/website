@@ -1,7 +1,11 @@
 ---
 title: Hello World
-date: "2015-05-28T22:40:32.169Z"
+date: '2015-05-28T22:40:32.169Z'
 ---
+
+When people think of Hong Kong, they usually refer to the densely populated city centre interspersed with street markets filled with delicious food and random knick knacks.
+
+![imaage](https://cdn-images-1.medium.com/max/1600/1*6or9_uewtOobwlqlPdJaXg.png)
 
 TL;DR: Touching the mouse is bad for productivity. Do it as little as possible or not at all.
 
