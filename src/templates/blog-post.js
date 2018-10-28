@@ -6,8 +6,7 @@ import styled from 'react-emotion'
 import Link from '../components/Link'
 import Layout from '../components/layout'
 import Section from '../components/Section'
-import { Tagline } from '../components/Text'
-import Meta from '../components/Meta'
+import { Tagline, Meta } from '../components/Text'
 
 const FeaturedImg = styled.img`
   ${tw`mx-auto flex`};

@@ -14,3 +14,7 @@ export const Tagline = styled.h2`
 export const Paragraph = styled.p`
   ${tw``};
 `
+
+export const Meta = styled.h5`
+  ${tw`text-grey text-xs font-normal pt-2`};
+`
