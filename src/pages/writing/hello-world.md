@@ -1,12 +1,12 @@
 ---
 title: Hello World
 date: '2015-05-28T22:40:32.169Z'
+featured_image: https://cdn-images-1.medium.com/max/1600/1*6or9_uewtOobwlqlPdJaXg.png
 ---
 
 When people think of Hong Kong, they usually refer to the densely populated city centre interspersed with street markets filled with delicious food and random knick knacks.
 
-![imaage](https://cdn-images-1.medium.com/max/1600/1*6or9_uewtOobwlqlPdJaXg.png)
-
+![imaage](https://s3.bukalapak.com/uploads/flash_banner/35423/homepage_banner/s-834-352/Banner_A-B_Test_-_ALL_VP_MANTEP.jpg.webp)
 TL;DR: Touching the mouse is bad for productivity. Do it as little as possible or not at all.
 
 There are some things you should know before we get started.
@@ -32,6 +32,7 @@ Generally speaking it involves editing text without using your mouse. If you’r
 So, what are command-based editors?
 Well, there are several command-based text editors out there. vi/vim, emacs, and nano/pico are some of the more common editors you may have heard about before. All of them are pretty great in some regard. But I know vim the best. And my third grade teacher taught me to write what I know so that’s what I’m going to stick with trying to explain here.
 
+![](https://cdn-images-1.medium.com/max/1600/1*6or9_uewtOobwlqlPdJaXg.png)
 Okay but what are these commands you speak of?
 Haha yeah I should explain that. Text editing, is just a bunch of common discreet tasks. Commands do things like: delete characters, copy lines of text, jump to other occurrences of a word in a project, paste saved blocks of code or text, and navigate between files. All without leaving your keyboard.
 
