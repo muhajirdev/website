@@ -12,50 +12,48 @@ const AllPosts = styled.div`
 `
 
 const index = () => (
-  <Layout>
-    <StaticQuery
-      query={graphql`
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                id
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  date(formatString: "MMMM Do, YYYY")
-                }
+  <StaticQuery
+    query={graphql`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                date(formatString: "MMMM Do, YYYY")
               }
             }
           }
         }
-      `}
-      render={data => {
-        const allPost = data.allMarkdownRemark.edges.map(({ node }) => ({
-          title: node.frontmatter.title,
-          date: node.frontmatter.date,
-          slug: node.fields.slug,
-        }))
-        return (
-          <Section>
-            <Tagline>Writings</Tagline>
-            <AllPosts>
-              {allPost.map(post => (
-                <List
-                  to={post.slug}
-                  key={post.slug}
-                  name={post.title}
-                  meta={post.date}
-                />
-              ))}
-            </AllPosts>
-          </Section>
-        )
-      }}
-    />
-  </Layout>
+      }
+    `}
+    render={data => {
+      const allPost = data.allMarkdownRemark.edges.map(({ node }) => ({
+        title: node.frontmatter.title,
+        date: node.frontmatter.date,
+        slug: node.fields.slug,
+      }))
+      return (
+        <Section>
+          <Tagline>Writings</Tagline>
+          <AllPosts>
+            {allPost.map(post => (
+              <List
+                to={post.slug}
+                key={post.slug}
+                name={post.title}
+                meta={post.date}
+              />
+            ))}
+          </AllPosts>
+        </Section>
+      )
+    }}
+  />
 )
 
 export default index

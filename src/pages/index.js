@@ -17,16 +17,14 @@ const TitleSection = () => (
 )
 
 const IndexPage = () => (
-  <Layout>
-    <Container>
-      <Section dark>
-        <TitleSection />
-      </Section>
-      <Section>
-        <OpenSourceSection />
-      </Section>
-    </Container>
-  </Layout>
+  <Container>
+    <Section dark>
+      <TitleSection />
+    </Section>
+    <Section>
+      <OpenSourceSection />
+    </Section>
+  </Container>
 )
 
 export default IndexPage

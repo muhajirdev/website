@@ -18,7 +18,7 @@ const Content = styled.div`
   }
 `
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const siteDescription = post.excerpt
@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   console.log(post)
 
   return (
-    <Layout location={location}>
+    <div>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
         meta={[{ name: 'description', content: siteDescription }]}
@@ -65,7 +65,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </Section>
-    </Layout>
+    </div>
   )
 }
 
