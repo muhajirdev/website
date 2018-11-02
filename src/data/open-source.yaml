@@ -11,6 +11,22 @@
   techs:
     - NodeJS
     - Typescript
+- title: countmits
+  link: https://github.com/muhajirframe/countmits
+  description: A simple cli to count your number of commits in your current repository
+  techs:
+    - Golang
+    - Homebrew
+- title: convert-unit
+  link: https://github.com/muhajirframe/convert-unit
+  description: Convert values to the closest unit
+  techs:
+    - Typescript
+- title: is-internal-link
+  link: https://github.com/muhajirframe/is-internal-link
+  description: A utility to detect whether given link is internal link or internal link
+  techs:
+    - Typescript
 - title: React Tailwind Emotion Starter
   link: https://github.com/muhajirframe/react-tailwind-emotion-starter
   description: A ReactJS starter with Tailwind CSS
