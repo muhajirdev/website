@@ -1,3 +1,6 @@
 - title: You Dont Know JS
   url: https://github.com/getify/You-Dont-Know-JS
   author: Kyle Simpson & Contributors
+- title: Learning JavaScript Design Patterns
+  url: https://addyosmani.com/resources/essentialjsdesignpatterns/book/index.html
+  author: Addy Osmani
