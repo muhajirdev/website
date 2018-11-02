@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Link as GatsbyLink } from 'gatsby'
+import { isInternalLink } from 'is-internal-link'
 
 import styled from 'react-emotion'
 
@@ -14,7 +15,7 @@ const Link = ({ children, to, ...other }) => {
   // Tailor the following test to your environment.
   // This example assumes that any internal link (intended for Gatsby)
   // will start with exactly one slash, and that anything else is external.
-  const internal = /^\/(?!\/)/.test(to)
+  const internal = isInternalLink(to)
 
   // Use gatsby-link for internal links, and <a> for others
   if (internal) {
