@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Tagline } from '../../components/Text'
 
-import Layout from '../../components/layout'
 import Section from '../../components/Section'
 import List from '../../components/List'
 
