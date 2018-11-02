@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'react-emotion'
 import { Tagline } from '../../components/Text'
 
-import Layout from '../../components/layout'
 import Section from '../../components/Section'
 import List from '../../components/List'
 
