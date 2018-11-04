@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Transition from './Transition'
 
 import Header from './header'
+import Footer from './Footer'
 import './layout.css'
 
 const Container = styled.div`
@@ -42,6 +43,7 @@ const Layout = ({ children, location }) => (
           <Header siteTitle={data.site.siteMetadata.shortTitle} />
           <Content>
             <Transition location={location}>{children}</Transition>
+            <Footer />
           </Content>
         </Container>
       </>
