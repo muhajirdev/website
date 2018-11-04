@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import styled from 'react-emotion'
 
 import Link from '../components/Link'
-import Layout from '../components/layout'
 import Section from '../components/Section'
 import { Tagline, Meta } from '../components/Text'
 
@@ -23,7 +22,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title
   const siteDescription = post.excerpt
   const { previous, next } = pageContext
-  console.log(post)
 
   return (
     <div>
