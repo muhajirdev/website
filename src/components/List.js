@@ -17,7 +17,7 @@ const Container = styled.div`
       opacity: 0;
       left: 0px;
       transform: 'translateX(0%)';
-      ${tw`font-light text-grey`};
+      ${tw`font-thin text-grey`};
     }
   }
   :hover {
