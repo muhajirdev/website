@@ -10,11 +10,10 @@ import Footer from './Footer'
 import './layout.css'
 
 const Container = styled.div`
-  ${tw`h-screen flex flex-col`};
+  ${tw`font-sans min-h-screen flex flex-col`};
 `
-
 const Content = styled.div`
-  ${tw`font-sans flex-1 overflow-y-scroll`};
+  ${tw`flex-1`};
 `
 
 const Layout = ({ children, location }) => (
@@ -29,7 +28,7 @@ const Layout = ({ children, location }) => (
       }
     `}
     render={data => (
-      <>
+      <Container>
         <Helmet
           title={data.site.siteMetadata.shortTitle}
           meta={[
@@ -39,14 +38,12 @@ const Layout = ({ children, location }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Container>
-          <Header siteTitle={data.site.siteMetadata.shortTitle} />
-          <Content>
-            <Transition location={location}>{children}</Transition>
-            <Footer />
-          </Content>
-        </Container>
-      </>
+        <Header siteTitle={data.site.siteMetadata.shortTitle} />
+        <Content>
+          <Transition location={location}>{children}</Transition>
+        </Content>
+        <Footer />
+      </Container>
     )}
   />
 )
