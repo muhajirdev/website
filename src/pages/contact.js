@@ -7,7 +7,7 @@ const Contact = () => (
   <Section>
     <Tagline>Contact</Tagline>
     <div>
-      <Link to="mailto:muhajirframe@gmail.com">contact@muhajirframe.com</Link>
+      <Link to="mailto:contact@muhajirframe.com">contact@muhajirframe.com</Link>
     </div>
   </Section>
 )
