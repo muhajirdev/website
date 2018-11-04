@@ -21,34 +21,30 @@ const Item = styled.h3`
 const Title = styled.h1`
   ${tw`text-grey-darkest text-base m-0`};
 `
-const StyledLink = styled(Link)`
-  ${tw`no-underline text-inherit`};
-`
-
 const LogoBig = ({ title }) => <Title className={hideOnSmall}>{title}</Title>
 const LogoSmall = ({ title }) => <Title className={hideOnBig}>{title[0]}</Title>
 
 const Header = ({ siteTitle }) => (
   <Container>
     <div>
-      <StyledLink to="/">
+      <Link to="/">
         <LogoSmall title={siteTitle} />
         <LogoBig title={siteTitle} />
-      </StyledLink>
+      </Link>
     </div>
     <Items>
-      <StyledLink to="/writing">
+      <Link to="/writing">
         <Item>WRITING</Item>
-      </StyledLink>
-      <StyledLink to="/reading">
+      </Link>
+      <Link to="/reading">
         <Item>READING</Item>
-      </StyledLink>
-      <StyledLink to="/#open-source">
+      </Link>
+      <Link to="/">
         <Item>WORK</Item>
-      </StyledLink>
-      <StyledLink to="https://github.com/muhajirframe">
+      </Link>
+      <Link to="https://github.com/muhajirframe">
         <Item>GITHUB</Item>
-      </StyledLink>
+      </Link>
     </Items>
   </Container>
 )
