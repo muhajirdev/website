@@ -12,7 +12,7 @@ const Container = styled.div`
   ${tw`flex justify-between`};
 `
 const Contact = () => (
-  <Ribbon dark>
+  <Ribbon>
     <Container>
       <Half left>
         <Link to="https://github.com/muhajirframe">
