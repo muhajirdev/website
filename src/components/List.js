@@ -13,19 +13,15 @@ const Container = styled.div`
     ::after {
       content: '→';
       transition: all 250ms ease-in-out;
-      position: relative;
       opacity: 0;
-      left: 0px;
-      transform: 'translateX(0%)';
-      ${tw`font-thin text-grey`};
+      ${tw`font-thin text-grey pl-6`};
     }
   }
   :hover {
     ${Name} {
       ::after {
         opacity: 1;
-        left: 30px;
-        transform: 'translateX(0%)';
+        ${tw`pl-8`}
       }
     }
   }
