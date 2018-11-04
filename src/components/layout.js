@@ -10,7 +10,7 @@ import Footer from './Footer'
 import './layout.css'
 
 const Container = styled.div`
-  ${tw`min-h-screen flex flex-col`};
+  ${tw`h-screen flex flex-col`};
 `
 
 const ContentViewport = styled.div`
