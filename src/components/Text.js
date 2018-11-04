@@ -18,3 +18,7 @@ export const Paragraph = styled.p`
 export const Meta = styled.h5`
   ${tw`text-grey text-xs font-normal pt-2`};
 `
+
+export const LinkItem = styled.h3`
+  ${tw`text-grey-darkest text-xs mb-0`};
+`
