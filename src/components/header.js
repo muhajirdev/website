@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'react-emotion'
+import Ribbon from './Ribbon'
 import Link from './Link'
 
 const hideOnSmall = css`
@@ -10,7 +11,7 @@ const hideOnBig = css`
 `
 
 const Container = styled.div`
-  ${tw`px-4 md:px-16 py-6 flex justify-between`};
+  ${tw`flex justify-between`};
 `
 const Items = styled.div`
   ${tw`flex items-center`};
@@ -25,28 +26,30 @@ const LogoBig = ({ title }) => <Title className={hideOnSmall}>{title}</Title>
 const LogoSmall = ({ title }) => <Title className={hideOnBig}>{title[0]}</Title>
 
 const Header = ({ siteTitle }) => (
-  <Container>
-    <div>
-      <Link to="/">
-        <LogoSmall title={siteTitle} />
-        <LogoBig title={siteTitle} />
-      </Link>
-    </div>
-    <Items>
-      <Link to="/writing">
-        <Item>WRITING</Item>
-      </Link>
-      <Link to="/reading">
-        <Item>READING</Item>
-      </Link>
-      <Link to="/">
-        <Item>WORK</Item>
-      </Link>
-      <Link to="https://github.com/muhajirframe">
-        <Item>GITHUB</Item>
-      </Link>
-    </Items>
-  </Container>
+  <Ribbon>
+    <Container>
+      <div>
+        <Link to="/">
+          <LogoSmall title={siteTitle} />
+          <LogoBig title={siteTitle} />
+        </Link>
+      </div>
+      <Items>
+        <Link to="/writing">
+          <Item>WRITING</Item>
+        </Link>
+        <Link to="/reading">
+          <Item>READING</Item>
+        </Link>
+        <Link to="/">
+          <Item>WORK</Item>
+        </Link>
+        <Link to="https://github.com/muhajirframe">
+          <Item>GITHUB</Item>
+        </Link>
+      </Items>
+    </Container>
+  </Ribbon>
 )
 
 export default Header
