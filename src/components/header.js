@@ -10,7 +10,7 @@ const hideOnBig = css`
 `
 
 const Container = styled.div`
-  ${tw`px-4 md:px-16 py-6 flex justify-between`};
+  ${tw`px-4 md:px-16 py-6 flex justify-between sticky pin-t z-10 bg-white`};
 `
 const Items = styled.div`
   ${tw`flex items-center`};
