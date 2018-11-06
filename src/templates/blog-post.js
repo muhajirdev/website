@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from 'react-emotion'
+import Img from 'gatsby-image'
 
 import Link from '../components/Link'
 import Section from '../components/Section'
@@ -34,9 +35,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Tagline>{post.frontmatter.title}</Tagline>
         <Meta>{post.frontmatter.date}</Meta>
       </Section>
-      {post.frontmatter.featured_image && (
-        <FeaturedImg src={post.frontmatter.featured_image} />
-      )}
+      {post.frontmatter.featured_image &&
+        (post.frontmatter.featured_image.childImageSharp ? (
+          <Img sizes={post.frontmatter.featured_image.childImageSharp.sizes} />
+        ) : (
+          <FeaturedImg src={post.frontmatter.featured_image.publicURL} />
+        ))}
       <Section small>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
 
@@ -85,7 +89,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        featured_image
+        featured_image {
+          publicURL
+          childImageSharp {
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }
