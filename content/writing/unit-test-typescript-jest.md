@@ -47,7 +47,7 @@ module.exports = {
 
 Create `tsconfig.json`
 
-```javascript
+```json
 {
   "compilerOptions": {
     "target": "es5",
@@ -56,7 +56,7 @@ Create `tsconfig.json`
     "strict": true,
     "declaration": true,
     "outDir": "dist",
-    "sourceMap": true,
+    "sourceMap": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
@@ -117,9 +117,11 @@ Install [vscode-jest](https://github.com/jest-community/vscode-jest)
 This GIF, should be self a great explanation how vscode-jest works
 
 Let's continue.
-![vscode-jest](../images/vscode-jest.png) 
+![vscode-jest](../images/vscode-jest.png)
 
 Your VSCode might now looks like this.
+
+### Implementing the code
 
 Let's implement our `main.ts`
 
