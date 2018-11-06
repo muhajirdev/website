@@ -1,5 +1,5 @@
 ---
-title: Unit Test with Typescript and Jest
+title: Unit Testing with Typescript and Jest
 date: 2018-11-06
 featured_image: ../images/ts-jest.png
 ---
