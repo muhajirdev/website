@@ -18,10 +18,20 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: ['gatsby-remark-unwrap-images'],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 740,
+            },
+          },
+          'gatsby-remark-unwrap-images',
+          'gatsby-remark-copy-linked-files',
+        ],
       },
     },
     'gatsby-plugin-tailwindcss',
@@ -30,8 +40,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve('./src/components/layout.js')
-      }
+        component: require.resolve('./src/components/layout.js'),
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

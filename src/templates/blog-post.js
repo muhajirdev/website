@@ -34,7 +34,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Tagline>{post.frontmatter.title}</Tagline>
         <Meta>{post.frontmatter.date}</Meta>
       </Section>
-      <FeaturedImg src={post.frontmatter.featured_image} />
+      {post.frontmatter.featured_image && (
+        <FeaturedImg src={post.frontmatter.featured_image} />
+      )}
       <Section small>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
 
