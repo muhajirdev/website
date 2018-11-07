@@ -39,7 +39,7 @@ const Layout = ({ children, location }) => (
             data.site.siteMetadata.shortTitle
           }`}
           meta={[
-            // { name: 'description', content: 'Sample' },
+            { name: 'description', content: 'Muhammad Muhajir. React / React Native / NodeJS. Fullstack Javascript Developer. ' },
             {
               name: 'keywords',
               content: 'fullstack, javascript, developer, web developer',
