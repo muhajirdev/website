@@ -16,6 +16,9 @@ const Content = styled.div`
   p {
     ${tw`leading-loose text-grey-darkest`};
   }
+  a {
+    ${tw`text-black`}
+  }
 `
 
 const BlogPostTemplate = ({ data, pageContext }) => {
