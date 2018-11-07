@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Muhammad Muhajir',
+    siteUrl: 'https://muhajirframe.com',
     shortTitle: 'MUHAJIR',
   },
   plugins: [
@@ -73,6 +74,7 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
   ],
 }
