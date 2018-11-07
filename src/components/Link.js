@@ -26,7 +26,7 @@ const Link = ({ children, to, ...other }) => {
     )
   }
   return (
-    <StyledLinkWithAnchor href={to} {...other} target="_blank">
+    <StyledLinkWithAnchor href={to} {...other} rel="noopener" target="_blank">
       {children}
     </StyledLinkWithAnchor>
   )
