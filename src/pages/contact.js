@@ -52,18 +52,21 @@ class Contact extends Component {
             name="name"
             onChange={this.handleChange}
             placeholder="Name"
+            required
           />
           <Input
             type="email"
             name="email"
             onChange={this.handleChange}
             placeholder="Email"
+            required
           />
           <TextArea
             name="message"
             onChange={this.handleChange}
             rows="5"
             placeholder="Message"
+            required
           />
           <Button type="submit">Send</Button>
         </Form>
