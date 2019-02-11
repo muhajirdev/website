@@ -44,8 +44,8 @@ const Header = ({ siteTitle }) => (
         <Link to="/">
           <Item>WORK</Item>
         </Link>
-        <Link to="https://github.com/muhajirframe">
-          <Item>GITHUB</Item>
+        <Link to="/contact">
+          <Item>CONTACT</Item>
         </Link>
       </Items>
     </Container>
