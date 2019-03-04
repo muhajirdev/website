@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Muhammad Muhajir',
     siteUrl: 'https://muhajirframe.com',
-    shortTitle: 'muhajirframe',
+    shortTitle: '@muhajirdev',
   },
   plugins: [
     'gatsby-transformer-yaml',
