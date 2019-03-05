@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Muhammad Muhajir',
-    siteUrl: 'https://muhajirframe.com',
+    siteUrl: 'https://muhajir.dev',
     shortTitle: '@muhajirdev',
   },
   plugins: [
