@@ -2,7 +2,7 @@
   "name": "gatsby-tailwind-emotion-starter",
   "description": "A Gatsby Starter With Tailwind CSS + Emotion Js",
   "version": "1.0.0",
-  "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
+  "author": "Muhammad Muhajir <muhammad@muhajir.dev>",
   "dependencies": {
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
