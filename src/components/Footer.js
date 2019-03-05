@@ -15,11 +15,11 @@ const Contact = () => (
   <Ribbon>
     <Container>
       <Half left>
-        <Link to="https://github.com/muhajirframe">
+        <Link to="https://github.com/muhajirdev">
           <LinkItem>GITHUB</LinkItem>
         </Link>
         <Space horizontal />
-        <Link to="https://twitter.com/muhajirframe">
+        <Link to="https://twitter.com/muhajirdev">
           <LinkItem>TWITTER</LinkItem>
         </Link>
       </Half>
