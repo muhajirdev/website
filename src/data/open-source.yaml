@@ -6,69 +6,69 @@
     - GatsbyJS
     - TailwindCSS
 - title: Deepwork
-  link: https://github.com/muhajirframe/deepwork
+  link: https://github.com/muhajirdev/deepwork
   description: A CLI to turn off mac off notification for x amount of time. To help you doing deepwork
   techs:
     - NodeJS
     - Typescript
 - title: countmits
-  link: https://github.com/muhajirframe/countmits
+  link: https://github.com/muhajirdev/countmits
   description: A simple cli to count your number of commits in your current repository
   techs:
     - Golang
     - Homebrew
 - title: convert-unit
-  link: https://github.com/muhajirframe/convert-unit
+  link: https://github.com/muhajirdev/convert-unit
   description: Convert values to the closest unit
   techs:
     - Typescript
 - title: is-internal-link
-  link: https://github.com/muhajirframe/is-internal-link
+  link: https://github.com/muhajirdev/is-internal-link
   description: A utility to detect whether given link is internal link or internal link
   techs:
     - Typescript
 - title: React Tailwind Emotion Starter
-  link: https://github.com/muhajirframe/react-tailwind-emotion-starter
+  link: https://github.com/muhajirdev/react-tailwind-emotion-starter
   description: A ReactJS starter with Tailwind CSS
   techs:
     - React
     - Tailwind CSS
 - title: Gatsby Tailwind Emotion Starter
-  link: https://github.com/muhajirframe/gatsby-tailwind-emotion-starter
+  link: https://github.com/muhajirdev/gatsby-tailwind-emotion-starter
   description: A Gatsby starter with Tailwind CSS + EmotionJS
   techs:
     - React
     - GatsbyJS
     - Tailwind CSS
 - title: VSCode Tailwind Styled Snippets
-  link: https://github.com/muhajirframe/vscode-tailwind-styled-snippets
+  link: https://github.com/muhajirdev/vscode-tailwind-styled-snippets
   description: Time saver for Tailwind CSS + Styled Components / EmotionJS user who use VSCode
   techs:
     - VSCode
 - title: VSCode React Emotion
-  link: https://github.com/muhajirframe/vscode-react-emotion
+  link: https://github.com/muhajirdev/vscode-react-emotion
   description: Time saver for react-emotion user
   techs:
     - VSCode
 - title: Gatsby Starter Firebase
-  link: https://github.com/muhajirframe/gatsby-starter-firebase
+  link: https://github.com/muhajirdev/gatsby-starter-firebase
   description: Gatsby + Firebase 👍
   techs:
     - ReactJS
     - GatsbyJS
     - Firebase
 - title: Gatsby Plugin TailwindCSS
-  link: https://github.com/muhajirframe/gatsby-plugin-tailwindcss
+  link: https://github.com/muhajirdev/gatsby-plugin-tailwindcss
   description: Plugin Tailwind CSS to your Gatsby website
   techs:
     - GatsbyJS
 - title: React Damn Simple Grid
-  link: https://github.com/muhajirframe/react-damn-simple-grid
+  link: https://github.com/muhajirdev/react-damn-simple-grid
   description: A damn simple grid React component
   techs:
     - ReactJS
 - title: Node Typescript One Click Starter
-  link: https://github.com/muhajirframe/node-typescript-oneclick-starter
+  link: https://github.com/muhajirdev/node-typescript-oneclick-starter
   description: A simple typescript starter
   techs:
     - Typescript
