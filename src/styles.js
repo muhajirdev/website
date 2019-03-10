@@ -27,6 +27,10 @@ export const px = arg => css(pl(arg), pr(arg))
 export const py = arg => css(pt(arg), pb(arg))
 export const p = arg => css(py(arg), px(arg))
 
+/* COLOR */
+export const bg = arg => css({ background: arg })
+export const color = arg => css({ color: arg })
+
 /* LENGTH */
 export const width = arg => css({ width: arg })
 export const maxWidth = arg => css({ maxWidth: arg })
