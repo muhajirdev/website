@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { map } from 'ramda'
+import { map, prop, compose } from 'ramda'
 
 export const name = '@muhajirdev/ui'
 
@@ -47,4 +47,9 @@ const breakpoints = {
   lg: '992px',
   xl: '1200px',
 }
-export const mq = map(bp => `@media (min-width: ${bp})`, breakpoints)
+export const selectMq = size =>
+  compose(
+    bp => `@media (min-width: ${bp})`,
+    prop(size)
+  )(breakpoints)
+export const mq = size => style => ({ [selectMq(size)]: style })
