@@ -1,8 +1,16 @@
-import { css } from 'react-emotion'
+import { css } from '@emotion/core'
+import { rounded, mb, py, px, fs } from '../styles'
+import { colors, margin, padding, textSizes } from '../../tailwind'
 
 // eslint-disable-next-line
-export const GeneralStyle = css`
-  border: 1px solid;
-  ${tw`rounded border-grey-light mb-4 py-2 px-2 text-sm`};
-  outline: 0;
-`
+export const GeneralStyle = css(
+  {
+    border: `1px solid ${colors['grey-light']}`,
+    outline: 0,
+  },
+  rounded,
+  mb(margin[4]),
+  py(padding[2]),
+  px(padding[2]),
+  fs(textSizes.sm)
+)
