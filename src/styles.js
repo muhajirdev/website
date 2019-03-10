@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { map, prop, compose } from 'ramda'
+import { prop, compose } from 'ramda'
 
 export const name = '@muhajirdev/ui'
 
