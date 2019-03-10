@@ -7,6 +7,7 @@ export const flex = css({ display: 'flex' })
 export const centerX = css(flex, { justifyContent: 'center' })
 export const centerY = css(flex, { alignItems: 'center' })
 export const flexWrap = (arg = 'wrap') => css(flex, { flexWrap: arg })
+export const justifyBetween = css(flex, { justifyContent: 'space-between' })
 
 /* MARGIN */
 export const ml = arg => css({ marginLeft: arg })
