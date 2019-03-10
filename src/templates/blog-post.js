@@ -7,10 +7,19 @@ import { css } from '@emotion/core'
 import Link from '../components/Link'
 import Section from '../components/Section'
 import { Tagline, Meta } from '../components/Text'
-import { flex, mx, maxW, lh, color } from '../styles'
+import {
+  flex,
+  mx,
+  maxW,
+  lh,
+  color,
+  flexWrap,
+  justifyBetween,
+  p,
+} from '../styles'
 
-const p = css([lh(2), color('#3d4852')])
-const a = css(color('#22292f'))
+const pStyle = css([lh(2), color('#3d4852')])
+const aStyle = css(color('#22292f'))
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -41,19 +50,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         ))}
       <Section small>
         <div
-          css={[maxW('40em'), { p, a }]}
+          css={[maxW('40em'), { p: pStyle, a: aStyle }]}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
 
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
+        <ul css={[flexWrap(), justifyBetween, p(0), { listStyle: 'none' }]}>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
