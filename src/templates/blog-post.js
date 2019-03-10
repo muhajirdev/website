@@ -1,25 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import styled from 'react-emotion'
 import Img from 'gatsby-image'
+import { css } from '@emotion/core'
 
 import Link from '../components/Link'
 import Section from '../components/Section'
 import { Tagline, Meta } from '../components/Text'
+import { flex, mx, maxW, lh, color } from '../styles'
 
-const FeaturedImg = styled('img')`
-  ${tw`mx-auto flex`};
-`
-const Content = styled('div')`
-  ${tw`max-w-md`};
-  p {
-    ${tw`leading-loose text-grey-darkest`};
-  }
-  a {
-    ${tw`text-black`};
-  }
-`
+const p = css([lh(2), color('#3d4852')])
+const a = css(color('#22292f'))
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -42,10 +33,17 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         (post.frontmatter.featured_image.childImageSharp ? (
           <Img sizes={post.frontmatter.featured_image.childImageSharp.sizes} />
         ) : (
-          <FeaturedImg src={post.frontmatter.featured_image.publicURL} />
+          <img
+            css={[mx('auto'), flex]}
+            alt={post.frontmatter.title}
+            src={post.frontmatter.featured_image.publicURL}
+          />
         ))}
       <Section small>
-        <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          css={[maxW('40em'), { p, a }]}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
 
         <ul
           style={{
