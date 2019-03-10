@@ -6,8 +6,10 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
+    "design-system-utils": "^1.5.0",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
+    "facepaint": "^1.2.1",
     "gatsby": "^2.0.40",
     "gatsby-image": "^2.0.19",
     "gatsby-plugin-emotion": "^2.0.7",
@@ -34,7 +36,6 @@
     "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.5.0",
-    "rebass": "^3.0.1",
     "tailwindcss": "^0.6.6"
   },
   "keywords": [
