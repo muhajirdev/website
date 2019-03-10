@@ -13,3 +13,12 @@ export const centerX = css(flex, {
 export const centerY = css(flex, {
   alignItems: 'center',
 })
+
+/**
+ *
+ * @param {(string|number)} arg
+ */
+export const width = arg =>
+  css({
+    width: arg,
+  })
