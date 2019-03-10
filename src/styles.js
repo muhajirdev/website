@@ -18,6 +18,15 @@ export const mx = arg => css(ml(arg), mr(arg))
 export const my = arg => css(mt(arg), mb(arg))
 export const m = arg => css(my(arg), mx(arg))
 
+/* PADDING */
+export const pl = arg => css({ paddingLeft: arg })
+export const pr = arg => css({ paddingRight: arg })
+export const pt = arg => css({ paddingTop: arg })
+export const pb = arg => css({ paddingBottom: arg })
+export const px = arg => css(pl(arg), pr(arg))
+export const py = arg => css(pt(arg), pb(arg))
+export const p = arg => css(py(arg), px(arg))
+
 /* LENGTH */
 export const width = arg => css({ width: arg })
 export const maxWidth = arg => css({ maxWidth: arg })
