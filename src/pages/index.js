@@ -1,13 +1,9 @@
 import React from 'react'
-import styled from 'react-emotion'
 
 import { Title, Tagline } from '../components/Text'
 import OpenSourceSection from '../components/OpenSourceSection'
 import Section from '../components/Section'
 
-const Container = styled.div`
-  ${tw``};
-`
 const TitleSection = () => (
   <>
     <Title>Muhammad Muhajir. React / React Native / NodeJS</Title>
@@ -16,14 +12,14 @@ const TitleSection = () => (
 )
 
 const IndexPage = () => (
-  <Container>
+  <div>
     <Section dark>
       <TitleSection />
     </Section>
     <Section>
       <OpenSourceSection />
     </Section>
-  </Container>
+  </div>
 )
 
 export default IndexPage
