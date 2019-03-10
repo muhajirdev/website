@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import { map } from 'ramda'
 
 export const name = '@muhajirdev/ui'
 
@@ -39,4 +40,11 @@ export const maxW = maxWidth
 
 /* Typography */
 export const lh = arg => css({ lineHeight: arg })
-export const color = arg => css({ color: arg })
+
+const breakpoints = {
+  sm: '576px',
+  md: '768px',
+  lg: '992px',
+  xl: '1200px',
+}
+export const mq = map(bp => `@media (min-width: ${bp})`, breakpoints)
