@@ -5,6 +5,7 @@ module.exports = {
     shortTitle: '@muhajirdev',
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
