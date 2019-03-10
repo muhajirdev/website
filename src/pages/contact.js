@@ -5,6 +5,7 @@ import { Tagline } from '../components/Text'
 import { Input, TextArea } from '../components/Input'
 import Form from '../components/Form'
 import Button from '../components/Button'
+import { flex, width } from '../styles'
 
 function encode(data) {
   return Object.keys(data)
@@ -37,12 +38,8 @@ class Contact extends Component {
   render = () => (
     <Section>
       <Tagline>Contact</Tagline>
-      <div css={{ display: 'flex' }}>
-        <div
-          css={{
-            width: '50%',
-          }}
-        >
+      <div css={flex}>
+        <div css={width('50%')}>
           <Form
             name="contact"
             method="post"
