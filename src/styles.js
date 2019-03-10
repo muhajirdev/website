@@ -48,3 +48,12 @@ export const width = arg =>
   css({
     width: arg,
   })
+
+export const w = width
+
+export const maxWidth = arg =>
+  css({
+    maxWidth: arg,
+  })
+
+export const maxW = maxWidth
