@@ -10,7 +10,7 @@ const Section = styled('section')(
   props => (props.small ? py(padding[12]) : py(padding[32])),
   { '> *': childStyle },
   px(padding[4]),
-  { [mq.md]: px(padding[16]) }
+  mq('md')(px[padding[16]])
 )
 
 export default Section
