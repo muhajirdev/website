@@ -43,6 +43,10 @@ export const lh = arg => css({ lineHeight: arg })
 export const fs = arg => css({ fontSize: arg })
 export const fw = arg => css({ fontWeight: arg })
 
+/* Border */
+export const round = arg => css({ borderRadius: arg })
+export const rounded = round('.25rem')
+
 const breakpoints = {
   sm: '576px',
   md: '768px',
