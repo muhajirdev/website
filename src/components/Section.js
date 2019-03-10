@@ -1,24 +1,16 @@
-import styled, { css } from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import { bg, py, mx, maxW, px, mq } from '../styles'
+import { colors, padding, maxWidth } from '../../tailwind'
 
-const darkBackground = css`
-  ${tw`bg-grey-lighter`};
-`
+const childStyle = css(mx('auto'), maxW(maxWidth.xl), tw`max-w-xl`)
 
-const paddingYBig = css`
-  ${tw`py-32`};
-`
-
-const paddingYSmall = css`
-  ${tw`py-12`};
-`
-
-const Section = styled('section')`
-  ${tw`px-4 md:px-16`};
-  > * {
-    ${tw`mx-auto max-w-xl`};
-  }
-  ${props => props.dark && darkBackground};
-  ${props => (props.small ? paddingYSmall : paddingYBig)};
-`
+const Section = styled('section')(
+  props => props.dark && bg(colors['grey-lighter']),
+  props => (props.small ? py(padding[12]) : py(padding[32])),
+  { '> *': childStyle },
+  px(padding[4]),
+  { [mq.md]: px(padding[16]) }
+)
 
 export default Section
