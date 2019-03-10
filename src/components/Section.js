@@ -12,7 +12,7 @@ const paddingYSmall = css`
   ${tw`py-12`};
 `
 
-const Section = styled.section`
+const Section = styled('section')`
   ${tw`px-4 md:px-16`};
   > * {
     ${tw`mx-auto max-w-xl`};

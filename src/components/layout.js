@@ -9,14 +9,14 @@ import Header from './header'
 import Footer from './Footer'
 import './layout.css'
 
-const Container = styled.div`
+const Container = styled('div')`
   ${tw`h-screen flex flex-col`};
 `
 
-const ContentViewport = styled.div`
+const ContentViewport = styled('div')`
   ${tw`font-sans flex-1 overflow-y-scroll flex flex-col`};
 `
-const Content = styled.div`
+const Content = styled('div')`
   ${tw`flex-1`};
 `
 

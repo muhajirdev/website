@@ -10,16 +10,16 @@ const hideOnBig = css`
   ${tw`block lg:hidden`};
 `
 
-const Container = styled.div`
+const Container = styled('div')`
   ${tw`flex justify-between`};
 `
-const Items = styled.div`
+const Items = styled('div')`
   ${tw`flex items-center`};
 `
-const Item = styled.h3`
+const Item = styled('h3')`
   ${tw`text-grey-darkest ml-4 sm:ml-8 text-xs mb-0`};
 `
-const Title = styled.h1`
+const Title = styled('h1')`
   ${tw`text-grey-darkest text-base m-0`};
 `
 const LogoBig = ({ title }) => <Title className={hideOnSmall}>{title}</Title>

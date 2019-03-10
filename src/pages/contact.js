@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { navigateTo } from 'gatsby'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
@@ -37,39 +37,45 @@ class Contact extends Component {
   render = () => (
     <Section>
       <Tagline>Contact</Tagline>
-      <div>
-        <Form
-          name="contact"
-          method="post"
-          action="/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
+      <div css={{ display: 'flex' }}>
+        <div
+          css={{
+            width: '50%',
+          }}
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <Input
-            type="text"
-            name="name"
-            onChange={this.handleChange}
-            placeholder="Name"
-            required
-          />
-          <Input
-            type="email"
-            name="email"
-            onChange={this.handleChange}
-            placeholder="Email"
-            required
-          />
-          <TextArea
-            name="message"
-            onChange={this.handleChange}
-            rows="5"
-            placeholder="Message"
-            required
-          />
-          <Button type="submit">Send</Button>
-        </Form>
+          <Form
+            name="contact"
+            method="post"
+            action="/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={this.handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <Input
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              placeholder="Name"
+              required
+            />
+            <Input
+              type="email"
+              name="email"
+              onChange={this.handleChange}
+              placeholder="Email"
+              required
+            />
+            <TextArea
+              name="message"
+              onChange={this.handleChange}
+              rows="5"
+              placeholder="Message"
+              required
+            />
+            <Button type="submit">Send</Button>
+          </Form>
+        </div>
       </div>
     </Section>
   )

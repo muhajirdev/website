@@ -8,16 +8,16 @@ import Link from '../components/Link'
 import Section from '../components/Section'
 import { Tagline, Meta } from '../components/Text'
 
-const FeaturedImg = styled.img`
+const FeaturedImg = styled('img')`
   ${tw`mx-auto flex`};
 `
-const Content = styled.div`
+const Content = styled('div')`
   ${tw`max-w-md`};
   p {
     ${tw`leading-loose text-grey-darkest`};
   }
   a {
-    ${tw`text-black`}
+    ${tw`text-black`};
   }
 `
 

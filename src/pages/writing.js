@@ -6,7 +6,7 @@ import { Tagline } from '../components/Text'
 import Section from '../components/Section'
 import List from '../components/List'
 
-const AllPosts = styled.div`
+const AllPosts = styled('div')`
   ${tw``};
 `
 

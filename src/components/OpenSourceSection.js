@@ -5,7 +5,7 @@ import styled from 'react-emotion'
 import { Tagline } from './Text'
 import List from './List'
 
-const Container = styled.div`
+const Container = styled('div')`
   ${tw``};
 `
 
