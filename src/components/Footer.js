@@ -1,20 +1,13 @@
 import React from 'react'
-import styled from 'react-emotion'
 import { LinkItem } from './Text'
 import Ribbon from './Ribbon'
 import Space from './Space'
 import Link from './Link'
 
-const Half = styled.div`
-  ${tw`flex`};
-`
-const Container = styled.div`
-  ${tw`flex justify-between`};
-`
 const Contact = () => (
   <Ribbon>
-    <Container>
-      <Half left>
+    <div css={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div css={{ display: 'flex' }}>
         <Link to="https://github.com/muhajirdev">
           <LinkItem>GITHUB</LinkItem>
         </Link>
@@ -22,13 +15,13 @@ const Contact = () => (
         <Link to="https://twitter.com/muhajirdev">
           <LinkItem>TWITTER</LinkItem>
         </Link>
-      </Half>
-      <Half>
+      </div>
+      <div>
         <Link to="/contact">
           <LinkItem>CONTACT</LinkItem>
         </Link>
-      </Half>
-    </Container>
+      </div>
+    </div>
   </Ribbon>
 )
 
