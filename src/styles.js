@@ -24,3 +24,4 @@ export const maxW = maxWidth
 
 /* Typography */
 export const lh = arg => css({ lineHeight: arg })
+export const color = arg => css({ color: arg })
