@@ -1,24 +1,31 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { color, fs, mq, mb, fw, pt } from '../styles'
+import { colors, textSizes, margin, fontWeights, padding } from '../../tailwind'
 
-export const Title = styled('h1')`
-  ${tw`text-black text-base md:text-xl mb-4 md:mb-base`};
-`
+export const Title = styled('h1')(
+  color(colors.black),
+  fs(textSizes.base),
+  mb(margin[4]),
+  mq('md')([fs(textSizes.xl), mb(margin.base)])
+)
+export const Subtitle = styled('h6')(color(colors.grey))
+export const Tagline = styled('h2')(
+  color(colors['green-darkest']),
+  fs(textSizes['2xl']),
+  mq('md')(fs(textSizes['5xl']))
+)
 
-export const Subtitle = styled('h6')`
-  ${tw`text-grey`};
-`
-export const Tagline = styled('h2')`
-  ${tw`text-grey-darkest text-2xl md:text-5xl`};
-`
+export const Paragraph = props => <p {...props} />
 
-export const Paragraph = styled('p')`
-  ${tw``};
-`
+export const Meta = styled('h5')(
+  color(colors['grey-darker']),
+  fs(textSizes.xs),
+  fw(fontWeights.normal),
+  pt(padding[2])
+)
 
-export const Meta = styled('h5')`
-  ${tw`text-grey-darker text-xs font-normal pt-2`};
-`
-
-export const LinkItem = styled('h3')`
-  ${tw`text-grey-darkest text-xs mb-0`};
-`
+export const LinkItem = styled('h3')(
+  color(colors['grey-darkest']),
+  fs(textSizes.xs),
+  mb(0)
+)
