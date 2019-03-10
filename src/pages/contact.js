@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { useState } from 'react'
 import { navigateTo } from 'gatsby'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
@@ -13,14 +13,12 @@ function encode(data) {
     .join('&')
 }
 
-class Contact extends Component {
-  state = {}
+const Contact = () => {
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [message, setMessage] = useState()
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -28,14 +26,16 @@ class Contact extends Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
+        name,
+        email,
+        message,
       }),
     })
       .then(() => navigateTo(form.getAttribute('action')))
       .catch(error => alert(error))
   }
 
-  render = () => (
+  return (
     <Section>
       <Tagline>Contact</Tagline>
       <div css={flex}>
@@ -46,26 +46,26 @@ class Contact extends Component {
             action="/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            onSubmit={this.handleSubmit}
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <Input
               type="text"
               name="name"
-              onChange={this.handleChange}
+              onChange={e => setName(e.target.value)}
               placeholder="Name"
               required
             />
             <Input
               type="email"
               name="email"
-              onChange={this.handleChange}
+              onChange={e => setEmail(e.target.value)}
               placeholder="Email"
               required
             />
             <TextArea
               name="message"
-              onChange={this.handleChange}
+              onChange={e => setMessage(e.target.value)}
               rows="5"
               placeholder="Message"
               required
