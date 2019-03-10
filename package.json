@@ -31,6 +31,7 @@
     "is-internal-link": "^1.0.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.4",
     "react-dom": "^16.5.1",
     "react-emotion": "^9.2.12",
