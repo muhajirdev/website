@@ -40,6 +40,8 @@ export const maxW = maxWidth
 
 /* Typography */
 export const lh = arg => css({ lineHeight: arg })
+export const fs = arg => css({ fontSize: arg })
+export const fw = arg => css({ fontWeight: arg })
 
 const breakpoints = {
   sm: '576px',
