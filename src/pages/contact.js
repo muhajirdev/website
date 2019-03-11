@@ -3,9 +3,9 @@ import { navigateTo } from 'gatsby'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
 import { Input, TextArea } from '../components/Input'
-import Form from '../components/Form'
 import Button from '../components/Button'
-import { flex, width } from '../styles'
+import { flex, mq, flexCol, my, maxW, w } from '../styles'
+import { margin, maxWidth } from '../../tailwind'
 
 function encode(data) {
   return Object.keys(data)
@@ -39,8 +39,9 @@ const Contact = () => {
     <Section>
       <Tagline>Contact</Tagline>
       <div css={flex}>
-        <div css={width('50%')}>
-          <Form
+        <div css={[w('100%'), mq('md')(w('50%'))]}>
+          <form
+            css={[flexCol, my(margin[8]), maxW(maxWidth.sm), w('100%')]}
             name="contact"
             method="post"
             action="/"
@@ -71,7 +72,7 @@ const Contact = () => {
               required
             />
             <Button type="submit">Send</Button>
-          </Form>
+          </form>
         </div>
       </div>
     </Section>
