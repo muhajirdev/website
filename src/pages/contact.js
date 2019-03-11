@@ -4,8 +4,8 @@ import Section from '../components/Section'
 import { Tagline } from '../components/Text'
 import { Input, TextArea } from '../components/Input'
 import Button from '../components/Button'
-import { flex, mq, flexCol, my, maxW, w } from '../styles'
-import { margin, maxWidth } from '../../tailwind'
+import { flex, mq, flexCol, my, w } from '../styles'
+import { margin } from '../../tailwind'
 
 function encode(data) {
   return Object.keys(data)
