@@ -41,7 +41,7 @@ const Contact = () => {
       <div css={flex}>
         <div css={[w('100%'), mq('md')(w('50%'))]}>
           <form
-            css={[flexCol, my(margin[8]), maxW(maxWidth.sm), w('100%')]}
+            css={[flexCol, my(margin[8]), w('100%')]}
             name="contact"
             method="post"
             action="/"
