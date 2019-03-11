@@ -8,7 +8,9 @@ export const flex = css({ display: 'flex' })
 export const centerX = css(flex, { justifyContent: 'center' })
 export const centerY = css(flex, { alignItems: 'center' })
 export const flexWrap = (arg = 'wrap') => css(flex, { flexWrap: arg })
+export const flexDirection = arg => css(flex, { flexDirection: arg })
 export const justifyBetween = css(flex, { justifyContent: 'space-between' })
+export const flexCol = flexDirection('column')
 
 /* MARGIN */
 export const ml = arg => css({ marginLeft: arg })
@@ -58,4 +60,5 @@ export const selectMq = size =>
     bp => `@media (min-width: ${bp})`,
     prop(size)
   )(breakpoints)
+
 export const mq = size => style => ({ [selectMq(size)]: style })
