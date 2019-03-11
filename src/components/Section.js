@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 import { bg, py, mx, maxW, px, mq } from '../styles'
 import { colors, padding, maxWidth } from '../../tailwind'
 
-const childStyle = css(mx('auto'), maxW(maxWidth.xl), tw`max-w-xl`)
+const childStyle = css(mx('auto'), maxW(maxWidth.xl))
 
 const Section = styled('section')(
   props => props.dark && bg(colors['grey-lighter']),
