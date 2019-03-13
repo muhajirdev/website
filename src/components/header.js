@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Ribbon from './Ribbon'
 import Link from './Link'
-import { mq, hidden, block } from '../styles'
+import { hidden, up, down } from '../styles'
 
 const Container = styled('div')`
   ${tw`flex justify-between`};
@@ -16,11 +16,9 @@ const Item = styled('h3')`
 const Title = styled('h1')`
   ${tw`text-grey-darkest text-base m-0`};
 `
-const LogoBig = ({ title }) => (
-  <Title css={[hidden, mq('sm')(block)]}>{title}</Title>
-)
+const LogoBig = ({ title }) => <Title css={down('sm')(hidden)}>{title}</Title>
 const LogoSmall = ({ title }) => (
-  <Title css={mq('sm')(hidden)}>{title[0]}</Title>
+  <Title css={up('sm')(hidden)}>{title[0]}</Title>
 )
 
 const Header = ({ siteTitle }) => (
