@@ -64,7 +64,7 @@ export const selectMqUp = size =>
 
 export const selectMqDown = size =>
   compose(
-    bp => `@media (min-width: ${bp})`,
+    bp => `@media (max-width: ${bp})`,
     prop(size)
   )(breakpoints)
 
