@@ -1,16 +1,8 @@
 import React from 'react'
-import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Ribbon from './Ribbon'
 import Link from './Link'
 import { mq, hidden, block } from '../styles'
-
-const hideOnSmall = css`
-  ${tw`hidden lg:block`};
-`
-const hideOnBig = css`
-  ${tw`block lg:hidden`};
-`
 
 const Container = styled('div')`
   ${tw`flex justify-between`};
