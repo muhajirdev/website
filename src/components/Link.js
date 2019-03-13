@@ -3,7 +3,7 @@ import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import { isInternalLink } from 'is-internal-link'
 
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const StyledLink = styled(GatsbyLink)`
   ${tw`no-underline text-black`};

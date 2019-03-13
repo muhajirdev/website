@@ -1,7 +1,9 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 import Ribbon from './Ribbon'
 import Link from './Link'
+import { mq, hidden, block } from '../styles'
 
 const hideOnSmall = css`
   ${tw`hidden lg:block`};
@@ -22,8 +24,12 @@ const Item = styled('h3')`
 const Title = styled('h1')`
   ${tw`text-grey-darkest text-base m-0`};
 `
-const LogoBig = ({ title }) => <Title className={hideOnSmall}>{title}</Title>
-const LogoSmall = ({ title }) => <Title className={hideOnBig}>{title[0]}</Title>
+const LogoBig = ({ title }) => (
+  <Title css={[hidden, mq('sm')(block)]}>{title}</Title>
+)
+const LogoSmall = ({ title }) => (
+  <Title css={mq('sm')(hidden)}>{title[0]}</Title>
+)
 
 const Header = ({ siteTitle }) => (
   <Ribbon>
