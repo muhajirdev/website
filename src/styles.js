@@ -62,3 +62,6 @@ export const selectMq = size =>
   )(breakpoints)
 
 export const mq = size => style => ({ [selectMq(size)]: style })
+
+export const hidden = css({ display: 'none' })
+export const block = css({ display: 'block' })
