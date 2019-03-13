@@ -49,19 +49,31 @@ export const fw = arg => css({ fontWeight: arg })
 export const round = arg => css({ borderRadius: arg })
 export const rounded = round('.25rem')
 
+/* MEDIA QUERIES */
 const breakpoints = {
   sm: '576px',
   md: '768px',
   lg: '992px',
   xl: '1200px',
 }
-export const selectMq = size =>
+export const selectMqUp = size =>
   compose(
     bp => `@media (min-width: ${bp})`,
     prop(size)
   )(breakpoints)
 
-export const mq = size => style => ({ [selectMq(size)]: style })
+export const selectMqDown = size =>
+  compose(
+    bp => `@media (min-width: ${bp})`,
+    prop(size)
+  )(breakpoints)
 
+export const up = size => style => ({ [selectMqUp(size)]: style })
+export const down = size => style => ({ [selectMqDown(size)]: style })
+
+// Use up by default for media queries
+export const mq = up
+
+/* DISPLAY */
 export const hidden = css({ display: 'none' })
 export const block = css({ display: 'block' })
