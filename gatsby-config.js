@@ -56,6 +56,7 @@ module.exports = {
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
+
     {
       resolve: 'gatsby-plugin-layout',
       options: {
@@ -75,6 +76,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
   ],
 }
