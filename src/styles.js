@@ -5,6 +5,7 @@ export const name = '@muhajirdev/ui'
 
 /* FLEX */
 export const flex = css({ display: 'flex' })
+export const inlineFlex = css({ display: 'inline-flex' })
 
 export const flexWrap = (arg = 'wrap') => css(flex, { flexWrap: arg })
 export const flexDirection = arg => css(flex, { flexDirection: arg })
