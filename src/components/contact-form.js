@@ -35,7 +35,7 @@ const ContactForm = () => {
 
   return (
     <form
-      css={[S.flex, S.flexCol, S.my(margin[8]), S.w('100%')]}
+      css={[S.flex, S.flexCol, S.w('100%')]}
       name="contact"
       method="post"
       action="/"

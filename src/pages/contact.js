@@ -2,30 +2,33 @@ import Section from '../components/Section'
 import { Tagline } from '../components/Text'
 import ContactForm from '../components/contact-form'
 import * as S from '../styles'
-import { margin } from '../../tailwind'
 import twitterIcon from '../images/twitter.svg'
+import emailIcon from '../images/email.svg'
+import { margin } from '../../tailwind'
 
 const column = [S.w('100%'), S.mq('md')(S.w('50%'))]
 const contactItemStyle = [
   S.link,
-  S.my(margin[8]),
   S.centerY,
   S.rounded,
   S.inlineFlex,
   S.py(8),
   S.px(16),
   S.border(`2px solid #000`),
+  S.mb(16)
 ]
 
 export const ContactItem = ({ title, icon, detail, url }) => (
   <div>
-    <a href={url} css={contactItemStyle}>
+    <div css={contactItemStyle}>
       <img alt="twitter icon" src={icon} css={[S.mb(0), S.w(48), S.mr(8)]} />
       <div>
-        <h3 css={S.mb(4)}>{title}</h3>
-        <h6 css={[S.mb(0), S.fw(500)]}>{detail}</h6>
+        <h4 css={S.mb(4)}>{title}</h4>
+        <a css={S.color('inherit')} href={url}>
+          <h6 css={[S.mb(0), S.fw(500)]}>{detail}</h6>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
 )
 
@@ -36,24 +39,24 @@ const twitterDMUrl = getTwitterDMUrl(TWITTER_ID)
 
 export const contacts = [
   {
-    title: 'Twitter',
+    title: '@muhajirdev',
     url: twitterDMUrl,
     icon: twitterIcon,
     detail: 'Send me a DM',
   },
   {
-    title: 'Email',
-    url: twitterDMUrl,
-    icon: twitterIcon,
-    detail: 'Send me a DM',
+    title: 'muhammad@muhajir.dev',
+    url: 'mailto: muhammad@muhajir.dev',
+    icon: emailIcon,
+    detail: 'Shoot me an mail',
   },
 ]
 
 const Contact = () => (
   <Section>
     <Tagline>Contact</Tagline>
-    <div css={[S.flex, S.flexWrap()]}>
-      <div css={column}>
+    <div css={[S.flex, S.flexWrap(), S.my(margin[10])]}>
+      <div css={[column]}>
         {contacts.map(({ title, url, icon, detail }) => (
           <ContactItem
             key={title}
