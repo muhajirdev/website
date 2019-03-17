@@ -52,6 +52,7 @@ export const fw = arg => css({ fontWeight: arg })
 /* Border */
 export const round = arg => css({ borderRadius: arg })
 export const rounded = round('.25rem')
+export const border = arg => css({ border: arg })
 
 /* MEDIA QUERIES */
 const breakpoints = {
