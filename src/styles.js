@@ -77,3 +77,8 @@ export const mq = up
 /* DISPLAY */
 export const hidden = css({ display: 'none' })
 export const block = css({ display: 'block' })
+
+/* LINK HELPER */
+export const link = css({
+  textDecoration: 'none',
+})
