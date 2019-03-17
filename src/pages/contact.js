@@ -1,17 +1,9 @@
-import { useState } from 'react'
-import { navigateTo } from 'gatsby'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
 import ContactForm from '../components/contact-form'
 import * as S from '../styles'
 import { margin } from '../../tailwind'
 import twitterIcon from '../images/twitter.svg'
-
-function encode(data) {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&')
-}
 
 const column = [S.w('100%'), S.mq('md')(S.w('50%'))]
 const contactItemStyle = [
@@ -49,49 +41,26 @@ export const contacts = [
   },
 ]
 
-const Contact = () => {
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [message, setMessage] = useState()
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        name,
-        email,
-        message,
-      }),
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
-  }
-
-  return (
-    <Section>
-      <Tagline>Contact</Tagline>
-      <div css={S.flexWrap()}>
-        <div css={column}>
-          {contacts.map(({ title, url, icon, detail }) => (
-            <ContactItem
-              key={title}
-              title={title}
-              url={url}
-              icon={icon}
-              detail={detail}
-            />
-          ))}
-        </div>
-        <div css={column}>
-          <ContactForm />
-        </div>
+const Contact = () => (
+  <Section>
+    <Tagline>Contact</Tagline>
+    <div css={S.flexWrap()}>
+      <div css={column}>
+        {contacts.map(({ title, url, icon, detail }) => (
+          <ContactItem
+            key={title}
+            title={title}
+            url={url}
+            icon={icon}
+            detail={detail}
+          />
+        ))}
       </div>
-    </Section>
-  )
-}
+      <div css={column}>
+        <ContactForm />
+      </div>
+    </div>
+  </Section>
+)
 
 export default Contact
