@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { navigateTo } from 'gatsby'
-import { css } from '@emotion/core'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
-import { Input, TextArea } from '../components/Input'
-import Button from '../components/Button'
+import ContactForm from '../components/contact-form'
 import * as S from '../styles'
 import { margin } from '../../tailwind'
 import twitterIcon from '../images/twitter.svg'
@@ -89,39 +87,7 @@ const Contact = () => {
           ))}
         </div>
         <div css={column}>
-          <form
-            css={[S.flexCol, S.my(margin[8]), S.w('100%')]}
-            name="contact"
-            method="post"
-            action="/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <Input
-              type="text"
-              name="name"
-              onChange={e => setName(e.target.value)}
-              placeholder="Name"
-              required
-            />
-            <Input
-              type="email"
-              name="email"
-              onChange={e => setEmail(e.target.value)}
-              placeholder="Email"
-              required
-            />
-            <TextArea
-              name="message"
-              onChange={e => setMessage(e.target.value)}
-              rows="5"
-              placeholder="Message"
-              required
-            />
-            <Button type="submit">Send</Button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </Section>
