@@ -5,12 +5,15 @@ export const name = '@muhajirdev/ui'
 
 /* FLEX */
 export const flex = css({ display: 'flex' })
-export const centerX = css(flex, { justifyContent: 'center' })
-export const centerY = css(flex, { alignItems: 'center' })
+
 export const flexWrap = (arg = 'wrap') => css(flex, { flexWrap: arg })
 export const flexDirection = arg => css(flex, { flexDirection: arg })
+export const alignItems = arg => css(flex, { alignItems: arg })
+
 export const justifyBetween = css(flex, { justifyContent: 'space-between' })
 export const flexCol = flexDirection('column')
+export const centerX = css(flex, { justifyContent: 'center' })
+export const centerY = css(flex, alignItems('center'))
 
 /* MARGIN */
 export const ml = arg => css({ marginLeft: arg })
@@ -81,4 +84,5 @@ export const block = css({ display: 'block' })
 /* LINK HELPER */
 export const link = css({
   textDecoration: 'none',
+  color: 'inherit',
 })
