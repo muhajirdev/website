@@ -3,16 +3,23 @@ import { prop, compose } from 'ramda'
 
 export const name = '@muhajirdev/ui'
 
-/* FLEX */
+/* DISPLAY */
+export const hidden = css({ display: 'none' })
+export const block = css({ display: 'block' })
+export const inline = css({ display: 'inline' })
 export const flex = css({ display: 'flex' })
 export const inlineFlex = css({ display: 'inline-flex' })
 
-export const flexWrap = (arg = 'wrap') => css(flex, { flexWrap: arg })
-export const flexDirection = arg => css(flex, { flexDirection: arg })
-export const alignItems = arg => css(flex, { alignItems: arg })
+/* FLEX */
+export const flexWrap = (arg = 'wrap') => css({ flexWrap: arg })
+export const flexDirection = arg => css({ flexDirection: arg })
+export const alignItems = arg => css({ alignItems: arg })
+export const justifyContent = arg => css({ justifyContent: arg })
 
-export const justifyBetween = css(flex, { justifyContent: 'space-between' })
+export const justifyBetween = css(justifyContent('space-between'))
 export const flexCol = flexDirection('column')
+
+/* Flex Utility */
 export const centerX = css(flex, { justifyContent: 'center' })
 export const centerY = css(flex, alignItems('center'))
 
@@ -78,10 +85,6 @@ export const down = size => style => ({ [selectMqDown(size)]: style })
 
 // Use up by default for media queries
 export const mq = up
-
-/* DISPLAY */
-export const hidden = css({ display: 'none' })
-export const block = css({ display: 'block' })
 
 /* LINK HELPER */
 export const link = css({

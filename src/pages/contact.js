@@ -18,13 +18,15 @@ const contactItemStyle = [
 ]
 
 export const ContactItem = ({ title, icon, detail, url }) => (
-  <a href={url} css={contactItemStyle}>
-    <img alt="twitter icon" src={icon} css={[S.mb(0), S.w(48), S.mr(8)]} />
-    <div>
-      <h3 css={S.mb(4)}>{title}</h3>
-      <h6 css={[S.mb(0), S.fw(500)]}>{detail}</h6>
-    </div>
-  </a>
+  <div>
+    <a href={url} css={contactItemStyle}>
+      <img alt="twitter icon" src={icon} css={[S.mb(0), S.w(48), S.mr(8)]} />
+      <div>
+        <h3 css={S.mb(4)}>{title}</h3>
+        <h6 css={[S.mb(0), S.fw(500)]}>{detail}</h6>
+      </div>
+    </a>
+  </div>
 )
 
 const getTwitterDMUrl = id =>
@@ -39,12 +41,18 @@ export const contacts = [
     icon: twitterIcon,
     detail: 'Send me a DM',
   },
+  {
+    title: 'Email',
+    url: twitterDMUrl,
+    icon: twitterIcon,
+    detail: 'Send me a DM',
+  },
 ]
 
 const Contact = () => (
   <Section>
     <Tagline>Contact</Tagline>
-    <div css={S.flexWrap()}>
+    <div css={[S.flex, S.flexWrap()]}>
       <div css={column}>
         {contacts.map(({ title, url, icon, detail }) => (
           <ContactItem

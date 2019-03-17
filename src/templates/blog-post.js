@@ -54,7 +54,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
 
-        <ul css={[flexWrap(), justifyBetween, p(0), { listStyle: 'none' }]}>
+        <ul
+          css={[flex, flexWrap(), justifyBetween, p(0), { listStyle: 'none' }]}
+        >
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
