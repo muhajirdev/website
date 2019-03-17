@@ -5,22 +5,7 @@ import Section from '../components/Section'
 import { Tagline } from '../components/Text'
 import { Input, TextArea } from '../components/Input'
 import Button from '../components/Button'
-import {
-  mq,
-  flexCol,
-  my,
-  w,
-  link,
-  mb,
-  centerY,
-  mr,
-  fw,
-  flexWrap,
-  inlineFlex,
-  rounded,
-  px,
-  py,
-} from '../styles'
+import * as S from '../styles'
 import { margin } from '../../tailwind'
 import twitterIcon from '../images/twitter.svg'
 
@@ -30,13 +15,41 @@ function encode(data) {
     .join('&')
 }
 
-const column = [w('100%'), mq('md')(w('50%'))]
-const border = css({ border: '2px solid #000' })
+const column = [S.w('100%'), S.mq('md')(S.w('50%'))]
+const contactItemStyle = [
+  S.link,
+  S.my(margin[8]),
+  S.centerY,
+  S.rounded,
+  S.inlineFlex,
+  S.py(8),
+  S.px(16),
+  S.border(`2px solid #000`),
+]
+
+export const ContactItem = ({ title, icon, detail, url }) => (
+  <a href={url} css={contactItemStyle}>
+    <img alt="twitter icon" src={icon} css={[S.mb(0), S.w(48), S.mr(8)]} />
+    <div>
+      <h3 css={S.mb(4)}>{title}</h3>
+      <h6 css={[S.mb(0), S.fw(500)]}>{detail}</h6>
+    </div>
+  </a>
+)
 
 const getTwitterDMUrl = id =>
   `https://twitter.com/messages/compose?recipient_id=${id}`
 const TWITTER_ID = '1102551936060932098'
 const twitterDMUrl = getTwitterDMUrl(TWITTER_ID)
+
+export const contacts = [
+  {
+    title: 'Twitter',
+    url: twitterDMUrl,
+    icon: twitterIcon,
+    detail: 'Send me a DM',
+  },
+]
 
 const Contact = () => {
   const [name, setName] = useState()
@@ -63,35 +76,21 @@ const Contact = () => {
   return (
     <Section>
       <Tagline>Contact</Tagline>
-      <div css={flexWrap()}>
+      <div css={S.flexWrap()}>
         <div css={column}>
-          <a
-            href={twitterDMUrl}
-            css={[
-              link,
-              my(margin[8]),
-              centerY,
-              border,
-              rounded,
-              inlineFlex,
-              py(8),
-              px(16),
-            ]}
-          >
-            <img
-              alt="twitter icon"
-              src={twitterIcon}
-              css={[mb(0), w(48), mr(8)]}
+          {contacts.map(({ title, url, icon, detail }) => (
+            <ContactItem
+              key={title}
+              title={title}
+              url={url}
+              icon={icon}
+              detail={detail}
             />
-            <div>
-              <h3 css={mb(4)}>Twitter</h3>
-              <h6 css={[mb(0), fw(500)]}>Send me a DM</h6>
-            </div>
-          </a>
+          ))}
         </div>
         <div css={column}>
           <form
-            css={[flexCol, my(margin[8]), w('100%')]}
+            css={[S.flexCol, S.my(margin[8]), S.w('100%')]}
             name="contact"
             method="post"
             action="/"
