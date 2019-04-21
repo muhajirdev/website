@@ -18,7 +18,7 @@ const Title = styled('h1')`
 `
 const LogoBig = ({ title }) => <Title css={down('sm')(hidden)}>{title}</Title>
 const LogoSmall = ({ title }) => (
-  <Title css={up('sm')(hidden)}>{title[0]}</Title>
+  <Title css={up('sm')(hidden)}>{title[1]}</Title>
 )
 
 const Header = ({ siteTitle }) => (
