@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { bg, py, mx, maxW, px, mq } from '../styles'
+import { bg, py, mx, maxW, px, mq } from 'monad-ui'
 import { colors, padding, maxWidth } from '../../tailwind'
 
 const childStyle = css(mx('auto'), maxW(maxWidth.xl))

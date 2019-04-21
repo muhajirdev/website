@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { color, fs, mq, mb, fw, pt } from '../styles'
+import { color, fs, mq, mb, fw, pt } from 'monad-ui'
 import { colors, textSizes, margin, fontWeights, padding } from '../../tailwind'
 
 export const Title = styled('h1')(

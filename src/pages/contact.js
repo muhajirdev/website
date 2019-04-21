@@ -1,7 +1,7 @@
+import * as S from 'monad-ui'
 import Section from '../components/Section'
 import { Tagline } from '../components/Text'
 import ContactForm from '../components/contact-form'
-import * as S from '../styles'
 import twitterIcon from '../images/twitter.svg'
 import emailIcon from '../images/email.svg'
 import { margin } from '../../tailwind'

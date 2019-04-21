@@ -3,10 +3,6 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
-
-import Link from '../components/Link'
-import Section from '../components/Section'
-import { Tagline, Meta } from '../components/Text'
 import {
   flex,
   mx,
@@ -16,7 +12,11 @@ import {
   flexWrap,
   justifyBetween,
   p,
-} from '../styles'
+} from 'monad-ui'
+
+import Link from '../components/Link'
+import Section from '../components/Section'
+import { Tagline, Meta } from '../components/Text'
 
 const pStyle = css([lh(2), color('#3d4852')])
 const aStyle = css(color('#22292f'))

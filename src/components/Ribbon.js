@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
+import { bg, px, mq, py } from 'monad-ui'
 import { colors, padding } from '../../tailwind'
-import { bg, px, mq, py } from '../styles'
 
 const Ribbon = styled('div')(
   props => props.dark && bg(colors['grey-lighter']),

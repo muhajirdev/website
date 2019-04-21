@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { navigateTo } from 'gatsby'
+import * as S from 'monad-ui'
 import { Input, TextArea } from './Input'
 import Button from './Button'
-import * as S from '../styles'
-import { margin } from '../../tailwind'
 
 function encode(data) {
   return Object.keys(data)

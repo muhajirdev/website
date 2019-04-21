@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { hidden, up, down } from 'monad-ui'
 import Ribbon from './Ribbon'
 import Link from './Link'
-import { hidden, up, down } from '../styles'
 
 const Container = styled('div')`
   ${tw`flex justify-between`};

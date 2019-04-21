@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { rounded, mb, py, px, fs } from '../styles'
+import { rounded, mb, py, px, fs } from 'monad-ui'
 import { colors, margin, padding, textSizes } from '../../tailwind'
 
 // eslint-disable-next-line
