@@ -29,6 +29,7 @@
     "gatsby-transformer-sharp": "^2.1.17",
     "gatsby-transformer-yaml": "^2.1.10",
     "is-internal-link": "^1.1.4",
+    "monad-ui": "^1.0.2",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
@@ -37,8 +38,7 @@
     "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.6.0",
-    "tailwindcss": "^0.6.6",
-    "monad-ui": "^1.0.0"
+    "tailwindcss": "^0.6.6"
   },
   "keywords": [
     "gatsby"
