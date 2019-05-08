@@ -3,7 +3,7 @@ title: Trying Flutter Web
 date: '2019-05-08T22:40:32.169Z'
 ---
 
-Google just released for [flutter for web]. This is awesome. With flutter, you will be able to use single codebase to develop iOS App, Android App, Desktop App, Web and Embedded 🌟
+Google just released flutter for web. This is awesome. With flutter, you will be able to use single codebase to develop iOS App, Android App, Desktop App, Web and Embedded 🌟
 
 ![flutter multi platform](https://techcrunch.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-01-at-9.19.45-AM.png)
 
