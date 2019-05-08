@@ -48,7 +48,7 @@ And type `>Flutter: New Web Project`
 ![vscode-opening-flutter](../images/vscode-opening-flutter.png)
 After it's done. Go to `main.dart` and press `F5`(Debug shortcut) on your laptop. Or Press ▶️ on Macbook Pro Touchbar
 
-That's it. Look at this beauty
+That's it. Look at this beauty 💙
 
 ![flutter-web-demo](../images/flutter-web-demo.png)
 
