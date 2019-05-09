@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { navigateTo } from 'gatsby'
+import { navigate } from 'gatsby'
 import * as S from 'monad-ui'
 import { Input, TextArea } from './Input'
 import Button from './Button'
@@ -28,7 +28,7 @@ const ContactForm = () => {
         message,
       }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      .then(() => navigate('/thanks'))
       .catch(error => alert(error))
   }
 
