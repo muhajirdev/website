@@ -4,7 +4,11 @@ import Ribbon from './Ribbon'
 import Space from './Space'
 import Link from './Link'
 
-const Contact = () => (
+import Contact from './contact'
+
+const Footer = () => (
+  <>
+  <Contact/>
   <Ribbon>
     <div css={{ display: 'flex', justifyContent: 'space-between' }}>
       <div css={{ display: 'flex' }}>
@@ -16,13 +20,9 @@ const Contact = () => (
           <LinkItem>TWITTER</LinkItem>
         </Link>
       </div>
-      <div>
-        <Link to="/contact">
-          <LinkItem>CONTACT</LinkItem>
-        </Link>
-      </div>
     </div>
   </Ribbon>
+  </>
 )
 
-export default Contact
+export default Footer

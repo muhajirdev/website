@@ -40,9 +40,6 @@ const Header = ({ siteTitle }) => (
         <Link to="/">
           <Item>WORK</Item>
         </Link>
-        <Link to="/contact">
-          <Item>CONTACT</Item>
-        </Link>
       </Items>
     </Container>
   </Ribbon>
